@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>GameEngine</title>
+        <style type="text/css">
+            *, html, body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            canvas#canvas {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+
+        <!--JAVASCRIPT-->
+        <!--COMPONENTS-->
+        <script type="text/javascript" src="app/components/baseComponent/BaseComponent.js"></script>
+        <script type="text/javascript" src="app/components/baseComponent/Component.js"></script>
+        <script type="text/javascript" src="app/components/TransformComponent.js"></script>
+        <!--Input-->
+        <script type="text/javascript" src="app/components/inputComponents/KeyInputComponent.js"></script>
+        <script type="text/javascript" src="app/components/inputComponents/MouseInputComponent.js"></script>
+        <!--Graphical-->
+        <script type="text/javascript" src="app/components/graphicalComponents/HealthBarComponent.js"></script>
+        <script type="text/javascript" src="app/components/graphicalComponents/BoostBarComponent.js"></script>
+        <script type="text/javascript" src="app/components/graphicalComponents/SpriteComponent.js"></script>
+        <script type="text/javascript" src="app/components/graphicalComponents/GuiComponent.js"></script>
+        <script type="text/javascript" src="app/components/graphicalComponents/GuiType.js"></script>
+        <!--AI-->
+        <script type="text/javascript" src="app/components/aiComponents/SimpleAIComponent.js"></script>
+        <script type="text/javascript" src="app/components/aiComponents/AdvancedAIComponent.js"></script>
+        <!--Mechanical-->
+        <script type="text/javascript" src="app/components/mechanicalComponents/BoostComponent.js"></script>
+        <script type="text/javascript" src="app/components/mechanicalComponents/HealthComponent.js"></script>
+        <script type="text/javascript" src="app/components/mechanicalComponents/CircleColliderComponent.js"></script>
+        <script type="text/javascript" src="app/components/mechanicalComponents/LifeStateComponent.js"></script>
+        <script type="text/javascript" src="app/components/mechanicalComponents/PickupComponent.js"></script>
+        <!--Combat-->
+        <script type="text/javascript" src="app/components/combatComponents/MeleeAttackComponent.js"></script>
+        <script type="text/javascript" src="app/components/combatComponents/ShootComponent.js"></script>
+
+        <!--CORE-->
+        <!--Entities-->
+        <script type="text/javascript" src="app/entities/BaseEntity.js"></script>
+        <script type="text/javascript" src="app/entities/Entity.js"></script>
+        <script type="text/javascript" src="app/entities/Player.js"></script>
+        <script type="text/javascript" src="app/entities/SimpleEnemy.js"></script>
+        <script type="text/javascript" src="app/entities/AdvancedEnemy.js"></script>
+        <script type="text/javascript" src="app/entities/Bullet.js"></script>
+        <script type="text/javascript" src="app/entities/HealthPickup.js"></script>
+        <!--Graphics-->
+        <script type="text/javascript" src="app/graphics/Canvas.js"></script>
+        <script type="text/javascript" src="app/graphics/Renderer.js"></script>
+        <script type="text/javascript" src="app/graphics/Sprite.js"></script>
+        <!--Util-->
+        <script type="text/javascript" src="app/util/Time.js"></script>
+        <script type="text/javascript" src="app/util/Vector2.js"></script>
+        <script type="text/javascript" src="app/util/Utils.js"></script>
+        <!--Menus-->
+        <script type="text/javascript" src="app/menus/Button.js"></script>
+        <script type="text/javascript" src="app/menus/Menu.js"></script>
+        <script type="text/javascript" src="app/menus/MainMenu.js"></script>
+        <script type="text/javascript" src="app/menus/PauseMenu.js"></script>
+        <script type="text/javascript" src="app/menus/ShopMenu.js"></script>
+        <!--Gameplay-->
+        <script type="text/javascript" src="app/gameplay/WaveManager.js"></script>
+        <!--Input-->
+        <script type="text/javascript" src="app/input/MenuMouseInput.js"></script>
+        <script type="text/javascript" src="app/input/KeyboardInput.js"></script>
+        <!--General-->
+        <script type="text/javascript" src="app/general/GameState.js"></script>
+        <script type="text/javascript" src="app/general/GameStateManager.js"></script>
+        <script type="text/javascript" src="app/general/GameManager.js"></script>
+        <!--Start the application-->
+        <script type="text/javascript">
+            window.onload = function() {
+                var game = new GameManager("canvas");
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="canvas">
+        </canvas>
+    </body>
+</html>
